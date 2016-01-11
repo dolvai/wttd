@@ -5,4 +5,4 @@ dj-libcloud==0.2.0
 Django==1.9
 python-decouple==3.0
 gunicorn==19.4.1
-sycopg2==2.6.1
+psycopg2==2.6.1
