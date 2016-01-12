@@ -14,9 +14,6 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 from decouple import config, Csv
 from dj_database_url import parse as dburl
-import libcloud.security
-libcloud.security.CA_CERTS_PATH.append('ca-bundle.crt')
-
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -102,21 +99,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-#STATIC_URL = '/static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-# dj-libcloud
-AWS_BUCKET_NAME = config('AWS_BUCKET_NAME')
-AWS_ACCESS_KEY = config('AWS_ACCESS_KEY')
-AWS_SECRET_KEY = config('AWS_SECRET_KEY')
-STATIC_URL = 'https://{}.s3-website-sa-east-1.amazonaws.com/'.format(AWS_BUCKET_NAME)
-STATICFILES_STORAGE = 'djlibcloud.storage.LibCloudStorage'
-LIBCLOUD_PROVIDERS = {
-    'default': {
-        'type': 'libcloud.storage.types.Provider.S3_SA_EAST',
-        'user': AWS_ACCESS_KEY,
-        'key': AWS_SECRET_KEY,
-        'bucket': AWS_BUCKET_NAME,
-        'secure': True,
-    },
-}
