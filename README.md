@@ -2,7 +2,6 @@
 
 Sistema de Eventos encomendado pela Morena.
 
-[![Build Status](https://travis-ci.org/andersonnunes/eventex.svg)](https://travis-ci.org/andersonnunes/eventex)
 
 ## Como desenvolver?
 
@@ -14,7 +13,7 @@ Sistema de Eventos encomendado pela Morena.
 6. Execute os testes
 
 ```console
-git clone git@github.com:andersonnunes/eventex.git wttd
+git clone git@github.com:dolvai/wttd.git wttd 
 cd wttd
 python -m venv .wttd
 source .wttd/bin/activate
@@ -25,12 +24,12 @@ python manage.py test
 
 ## Como fazer o deploy?
 
-1. Crie uma instância no heroku
-2. Envie as configurações para o heroku
-3. Defina uma SECRET_KEY segura para a instância
-4. Defina DEBUG=False
-5. Configure o serviço de email
-6. Envie o código para o heroku
+1. Crie uma instância no heroku.
+2. Envie as configurações para o heroku.
+3. Defina uma SECRET_KEY segura para a instância.
+4. Defina DEBUG=False.
+5. Configure o serviço de email.
+6. Envie o código para o heroku.
 
 ```console
 heroku create minhainstancia
