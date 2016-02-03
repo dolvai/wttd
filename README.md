@@ -2,6 +2,9 @@
 
 Sistema de Eventos encomendado pela Morena.
 
+[![Code Health](https://landscape.io/github/dolvai/wttd/master/landscape.svg?style=flat)](https://landscape.io/github/dolvai/wttd/master)
+[![Build Status](https://travis-ci.org/dolvai/wttd.svg?branch=master)](https://travis-ci.org/dolvai/wttd)
+
 
 ## Como desenvolver?
 
